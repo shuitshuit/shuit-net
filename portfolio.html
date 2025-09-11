@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
     <title>shuit Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -35,12 +36,13 @@
             <div class="border rounded-xl p-4 mb-4 bg-white shadow">
                 <h3 class="text-xl font-semibold">musicDL (CLI Tool)</h3>
                 <p class="text-sm text-gray-600 mb-2">
-                    YouTubeから音楽をダウンロードし、Spotifyメタデータを付与後スマホに共有するCLIツール。
+                    音楽ファイルのメタデータ管理とオーディオフォーマット変換を行うCLIツール。
                 </p>
                 <ul class="list-disc ml-5 text-sm text-gray-700 mb-4">
-                    <li>C#, yt-dlp, ffmpeg, Spotify API</li>
-                    <li>LGPL準拠でffmpeg/yt-dlpを自前ビルド</li>
-                    <li>ダウンロード→タグ付け→転送可能</li>
+                    <li>C# (.NET 8.0), FFmpeg, TagLibSharp, SpotifyAPI.Web</li>
+                    <li>複数フォーマット対応（MP3, FLAC, WAV, AAC, OGG）</li>
+                    <li>Spotify統合による高精度メタデータ取得</li>
+                    <li>バッチ処理とアルバムアートワーク管理</li>
                 </ul>
                 <a href="https://github.com/shuitshuit/musicDL" target="_blank"
                     class="block p-4 rounded border bg-blue-50 hover:bg-blue-100 border-blue-200 transition">
@@ -52,11 +54,13 @@
             <div class="border rounded-xl p-4 bg-white shadow">
                 <h3 class="text-xl font-semibold">sendEmail (CLI Tool)</h3>
                 <p class="text-sm text-gray-600 mb-2">
-                    サーバーやパスワードを毎回入力せず、ユーザー設定でメール送信できるCLIツール。
+                    柔軟で安全なメール送信機能を提供するCLIツール。テンプレートとセキュアな設定管理に対応。
                 </p>
                 <ul class="list-disc ml-5 text-sm text-gray-700 mb-4">
-                    <li>C#で構築</li>
-                    <li>ユーザー設定を活用し、繰り返しの利用が容易</li>
+                    <li>C# (.NET 8.0), MailKit, NLog</li>
+                    <li>暗号化パスワード保存（Windows: DPAPI、Linux: AES）</li>
+                    <li>メールテンプレートと変数置換機能</li>
+                    <li>添付ファイルサポートと包括的ログ機能</li>
                 </ul>
                 <a href="https://github.com/shuitshuit/ShuitNet.SendEmail" target="_blank"
                     class="block p-4 rounded border bg-blue-50 hover:bg-blue-100 border-blue-200 transition">
@@ -71,19 +75,21 @@
             <h2 class="text-2xl font-semibold mb-6">Library</h2>
 
             <div class="border rounded-xl p-4 mb-4 bg-white shadow">
-                <h3 class="text-xl font-semibold">ShuitNet.SQL</h3>
+                <h3 class="text-xl font-semibold">Shuit.ORM</h3>
                 <p class="text-sm text-gray-600 mb-2">
-                    C#のPostgreSQL向けORMライブラリ。
+                    .NET向けの軽量でシンプルなORMライブラリ。PostgreSQLとMySQLをサポート。
                 </p>
                 <ul class="list-disc ml-5 text-sm text-gray-700 mb-4">
-                    <li>PostgreSQLのORM機能を提供</li>
-                    <li>様々な命名規則に対応</li>
-                    <li>LINQクエリのサポート</li>
+                    <li>PostgreSQL、MySQL両対応</li>
+                    <li>多様な命名規則の自動変換（CamelCase、SnakeCase等）</li>
+                    <li>非同期処理サポート（async/await）</li>
+                    <li>データマスキング機能</li>
+                    <li>属性ベース設定とトランザクション管理</li>
                 </ul>
-                <a href="https://github.com/shuitshuit/ShuitNet.SQL" target="_blank"
+                <a href="https://github.com/shuitshuit/Shuit.ORM" target="_blank"
                     class="block p-4 rounded border bg-blue-50 hover:bg-blue-100 border-blue-200 transition">
-                    <p class="text-blue-700 font-medium">GitHub リポジトリ: ShuitNet.SQL</p>
-                    <p class="text-sm text-blue-600">https://github.com/shuitshuit/ShuitNet.SQL</p>
+                    <p class="text-blue-700 font-medium">GitHub リポジトリ: Shuit.ORM</p>
+                    <p class="text-sm text-blue-600">https://github.com/shuitshuit/Shuit.ORM</p>
                 </a>
         </section>
 
@@ -93,7 +99,7 @@
             <ul class="list-disc ml-5 text-gray-700">
                 <li>C# Python Java JavaScript</li>
                 <li>バックエンド開発（API連携、認証処理、CLIツール設計）</li>
-                <li>yt-dlp / ffmpeg のビルドとライセンス対応</li>
+                <li>ffmpeg のビルドとライセンス対応</li>
                 <li>Line Messaging API, Spotify API</li>
             </ul>
         </section>
