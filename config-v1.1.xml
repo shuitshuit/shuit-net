@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientConfig version="1.1">
+    <emailProvider id="shuit.net">
+        <domain>shuit.net</domain>
+
+        <!-- 表示名 -->
+        <displayName>Shuit.net Mail</displayName>
+        <displayShortName>Shuit</displayShortName>
+
+        <!-- 受信サーバー設定 (IMAP) -->
+        <incomingServer type="imap">
+            <hostname>tomatobeaver14.sakura.ne.jp</hostname>
+            <port>993</port>
+            <socketType>SSL</socketType>
+            <authentication>password-cleartext</authentication>
+            <username>%EMAILADDRESS%</username>
+        </incomingServer>
+
+        <!-- 送信サーバー設定 (SMTP) -->
+        <outgoingServer type="smtp">
+            <hostname>tomatobeaver14.sakura.ne.jp</hostname>
+            <port>587</port>
+            <socketType>STARTTLS</socketType>
+            <authentication>password-cleartext</authentication>
+            <username>%EMAILADDRESS%</username>
+        </outgoingServer>
+
+        <!-- ドキュメントURL（オプション） -->
+        <documentation url="https://shuit.net/mail-setup">
+            <descr lang="ja">メール設定ガイド</descr>
+            <descr lang="en">Mail Setup Guide</descr>
+        </documentation>
+    </emailProvider>
+</clientConfig>
