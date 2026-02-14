@@ -7,10 +7,10 @@
         <displayName>Menpre Mail</displayName>
         <displayShortName>Menpre</displayShortName>
 
-        <!-- 受信サーバー設定 (POP3) -->
-        <incomingServer type="pop3">
+        <!-- 受信サーバー設定 (IMAP) -->
+        <incomingServer type="imap">
             <hostname>tomatobeaver14.sakura.ne.jp</hostname>
-            <port>995</port>
+            <port>993</port>
             <socketType>SSL</socketType>
             <authentication>password-cleartext</authentication>
             <username>%EMAILLOCALPART%@tomatobeaver14.sakura.ne.jp</username>
