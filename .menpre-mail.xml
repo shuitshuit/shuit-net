@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <clientConfig version="1.1">
-    <emailProvider id="shuit.net">
-        <domain>shuit.net</domain>
+    <emailProvider id="autoconfig.menpre.com">
+        <domain>menpre.com</domain>
 
         <!-- 表示名 -->
-        <displayName>Shuit.net Mail</displayName>
-        <displayShortName>Shuit</displayShortName>
+        <displayName>Menpre Mail</displayName>
+        <displayShortName>Menpre</displayShortName>
 
-        <!-- 受信サーバー設定 (IMAP) -->
-        <incomingServer type="imap">
+        <!-- 受信サーバー設定 (POP3) -->
+        <incomingServer type="pop3">
             <hostname>tomatobeaver14.sakura.ne.jp</hostname>
-            <port>993</port>
+            <port>995</port>
             <socketType>SSL</socketType>
             <authentication>password-cleartext</authentication>
             <username>%EMAILLOCALPART%@tomatobeaver14.sakura.ne.jp</username>
